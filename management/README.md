@@ -1,5 +1,5 @@
 ## Introduce Eunsung's Project
-리액트를 이용한 진은성님의 프로젝트 소개 페이지입니다.
+리액트를 이용한 고객관리 시스템 페이지를 간단히 만들었습니다.
 
 # Getting Started with Create React App
 
