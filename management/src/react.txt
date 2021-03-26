@@ -1,0 +1,71 @@
+# 설치
+npm install -g create-react-app -> create-react-app
+npm install -g yarn
+
+# 리액트 기본구조
+import React, {Component} from 'react';
+
+class App extends Component {
+    내용~~~~
+}
+
+# 리액트의 주요기능 (Component 사용)
+// 리액트에서 Subject라는 이름의 태그 만들기
+class Subject extends Component {
+    // 해당 태그의 내용
+    render() {
+        return (
+            html 내용
+        )
+    }
+}
+
+class App extends Component {
+    // 위에서 Subject라는 태그 내용 불러오기!
+    <Subject></Subject>
+}
+
+# 리액트의 주요기능2 (Component 안 props 사용) => 구조는 같지만 내용이 다른 웹 개발 가능
+// 기본 props 이용
+class Subject extends Component {
+    // 해당 태그의 내용
+    render() {
+        return (
+            <h1>{this.props.title}</h1>
+            {this.props.sub}
+        )
+    }
+}
+
+// state 설정
+class Subject extends Component {
+    // 해당 태그의 내용
+    render() {
+        var list = [];
+        var i = 0;
+        while(i<this.props.date.length) {
+            var data = this.props.data[i];
+            list.push({data.title} <br> {data.sub});
+            i = i +1;
+        }
+        return (
+            // 위에서 정의해준 list
+            {list} 
+        )
+    }
+}
+
+class App extends Component {
+    state = {
+        contents:[
+            {id:1, title:'HTML', sub:'HTML is for information'},
+            {id:2, title:'HTML2', sub:'HTML2 is for information'},
+            {id:3, title:'HTML3', sub:'HTML3 is for information'}
+        ]
+    }
+    // props 값을 설정해주기
+    <Subject title="내용" sub="내용"></Subject>
+    
+    // state 활용
+    <Subject data={this.state.contents}></Subject>
+}
