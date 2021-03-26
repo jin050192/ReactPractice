@@ -45,7 +45,9 @@ class Subject extends Component {
         var i = 0;
         while(i<this.props.date.length) {
             var data = this.props.data[i];
-            list.push({data.title} <br> {data.sub});
+            list.push(
+                {data.title} <br> {data.sub}
+            );
             i = i +1;
         }
         return (
@@ -65,7 +67,10 @@ class App extends Component {
     }
     // props 값을 설정해주기
     <Subject title="내용" sub="내용"></Subject>
-    
+
     // state 활용
     <Subject data={this.state.contents}></Subject>
 }
+
+# 함수 안에서 this가 정의되지 않았을때 함수 뒤에 .bind(this) 붙이면 함수안에서 this를 쓸 수 있음.
+# state 값을 변경할때는 this.setState 이용!!
